@@ -1,0 +1,32 @@
+<!--pages/detail/index.wxml-->
+<cu-custom bgColor="bg-1296db" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">{{title}}</view>
+</cu-custom>
+<view class="container">
+  <view class="bg_img">
+    <image src="{{img}}" mode="" />
+  </view>
+  <view class="titile_txt">
+    {{title}}
+  </view>
+  <view class="foodIngredients">
+    <view class="materials_used_area">
+      <view class="materials_used">用料：</view>
+      <view><button type="primary" plain="true" bindtap="addToBasket">添加到菜篮子</button></view>
+    </view>
+    <view wx:key="id" wx:for="{{foodIngredients}}" class="foodIngredients_list">
+      <view>{{item.content.mcname}}</view>
+      <view>{{item.content.num}}</view>
+    </view>
+  </view>
+  <view class="detailSteps">
+    <view wx:key="id" wx:for="{{detailSteps}}" class="detailSteps_list">
+      <view class="step_index">步骤{{index+1}}</view>
+      <view class="step_img">
+        <image src="{{item.image}}" mode="scaleToFill" />
+      </view>
+      <view class="step_remake">{{item.remake}}</view>
+    </view>
+  </view>
+</view>

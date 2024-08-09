@@ -1,0 +1,61 @@
+/**index.wxss**/
+
+page {
+  padding-top: 54rpx;
+  background-color: #f6f6f6;
+  padding-bottom: 60rpx;
+}
+
+.title {
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #000000;
+  font-size: 44rpx;
+  margin-bottom: 40rpx;
+}
+
+.flex-wrp{
+  margin-top: 60rpx;
+  display:grid;
+  grid-template-columns: 50% 50%;
+  width: 100%;
+}
+
+.flex-item{
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 10rpx;
+  line-height: normal;
+  width: 95%;
+  height: 500rpx;
+  font-size: 26rpx;
+  background-color: #fff;
+  border-radius: 30rpx;
+  border: 1rpx solid rgb(240, 230, 230);
+}
+
+.img_item{
+  max-width: 100%;
+}
+
+.img_item > image{
+  max-width: 100%;
+  max-height: 300rpx;
+  border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+}
+
+.text_item{
+  text-align: left;
+  text-indent: 20rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+  margin-top: 20rpx;
+}
+
+.time_item{
+  text-align: left;
+  text-indent: 20rpx;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+}

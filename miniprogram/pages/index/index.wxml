@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<cu-custom bgColor="bg-1296db" isBack="">
+  <view slot="content">选择美食</view>
+</cu-custom>
+<view class="container">
+  <view class="flex-wrp">
+    <view bindtap="detail" data-index="{{index}}" class="flex-item" wx:key="*this" wx:for="{{indexData}}">
+      <view class="img_item">
+        <image src="{{item.img}}" mode="scaleToFill" />
+      </view>
+      <view class="text_item">
+        <text>{{item.title}}</text>
+      </view>
+      <view class="time_item">
+        <text>{{item.synopsis}}</text>
+      </view>
+    </view>
+  </view>
+</view>

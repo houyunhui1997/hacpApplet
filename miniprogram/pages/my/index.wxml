@@ -1,0 +1,54 @@
+<!-- pages/me/index.wxml -->
+<cu-custom bgColor="bg-1296db" isBack="">
+  <view slot="content">我</view>
+</cu-custom>
+<view class="page_container">
+  <view class="top_bg" />
+  <view class="main_content">
+    <view class="userinfo_container">
+      <block wx:if="{{ !openId }}">
+        <image class="avatar" src="../../images/icons/avatar.svg" bind:tap="getUserProfile" mode="widthFix" />
+        <view class="username" bind:tap="getUserProfile">
+          请点击登录
+        </view>
+      </block>
+      <block wx:else>
+        <image class="avatar" src="{{userInfo.avatarUrl}}" mode="widthFix" />
+        <view class="username">{{userInfo.nickName}}</view>
+      </block>
+    </view>
+    <view class="settings_container">
+      <view class="setting_item">
+        <view class="left">
+          <image class="setting_icon" src="../../images/icons/basket.svg" />
+          <view bindtap="getMyBasket" class="setting_text">菜篮子</view>
+        </view>
+        <image class="arrow_icon" src="../../images/arrow.svg" />
+      </view>
+      <view class="setting_item">
+        <view class="left">
+          <image class="setting_icon" src="../../images/icons/gift.svg" />
+          <view bind:tap="showTip" class="setting_text">抽奖记录</view>
+        </view>
+        <image class="arrow_icon" src="../../images/arrow.svg" />
+      </view>
+      <view class="setting_item">
+        <view class="left">
+          <image class="setting_icon" src="../../images/icons/customerService.svg" />
+          <button open-type="contact" class="contact-button">
+            联系客服
+          </button>
+        </view>
+        <image class="arrow_icon" src="../../images/arrow.svg" />
+      </view>
+      <view class="setting_item" >
+        <view class="left">
+          <image class="setting_icon" src="../../images/icons/share.svg" />
+          <view bind:tap="gotoWxCodePage" class="setting_text">分享小程序</view>
+        </view>
+        <image class="arrow_icon" src="../../images/arrow.svg" />
+      </view>
+    </view>
+  </view>
+  <cloud-tip-modal showUploadTipProps="{{showUploadTip}}" />
+</view>

@@ -1,0 +1,77 @@
+/* pages/detail/index.wxss */
+
+.bg_img{
+  /* width: 100%; */
+  /* height: 200rpx;
+  display: block; */
+}
+.titile_txt{
+  font-weight: bold;
+  font-size: 40rpx;
+  text-align: left;
+  color: red;
+}
+
+.materials_used_area{
+  display: flex;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #E5E5E3;
+  padding-bottom: 20px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.foodIngredients{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+}
+
+.foodIngredients_list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  font-size: 15px;
+  border-bottom: 1px solid #E5E5E3;
+}
+
+.detailSteps{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  
+}
+
+.detailSteps_list{
+  font-size: 15px;
+  border-bottom: 1px solid #E5E5E3;
+  padding: 20px;
+}
+
+.step_index{
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.step_img{
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.step_img > image{
+  width: 100%;
+  min-height: 100%;
+  border-radius: 10px;
+  fill-opacity: cover;
+}
+
+.step_remake{
+  font-size: 16px;
+}
